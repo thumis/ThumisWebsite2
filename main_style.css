@@ -14,30 +14,7 @@ p:not(.footer){
 .footer{
 
 }
-/*#klok{
-    width: 30rem;
-    height: 30rem;
-    border: 7px solid #545271;
-    border-radius: 50%;
-    margin: 50px auto;
-    position: relative;
-    padding: 2rem;
-    background: #E3EDF7;
-    -webkit-box-shadow:
-            -20px -20px 30px rgba(255, 255, 255, 0.51),
-            20px 20px 30px #d1dee9;
-    moz-box-shadow:
-            -20px -20px 30px rgba(255, 255, 255, 0.51),
-            20px 20px 30px #d1dee9;
-    box-shadow:
-            -20px -20px 30px rgba(255, 255, 255, 0.51),
-            20px 20px 30px #d1dee9;
 
-
-    background-image: url("img/giphy.gif");
-    opacity:0.8;
-    background-size: cover;
-}*/
 html {
     text-align: center;
     font-size: 10px;
@@ -149,15 +126,11 @@ section#klok {
     grid-template-columns: 33.33% 33.33% 33.33%;
     justify-items: center;
     align-items: center;
-
     grid-template-areas:
             ". dagDeel . "
             ". . ."
             ". dag . ";
     grid-template-rows: 33.33% ;
-
-
-
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
@@ -189,15 +162,12 @@ section#klok {
     transform-origin: 100%;
     transform: rotate(90deg);
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-
 }
 
 #urenWijzer {
     width: 20%;
     z-index: 3;
-    box-shadow:
-            5px 5px 5px rgba(0, 0, 0, 0.13);
-
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
 }
 
 #minutenWijzer {
