@@ -8,7 +8,17 @@ function tijdWeergave(){
     var dagenNamen = ['Zon', 'Maa', 'Din', 'Woe', 'Don', 'Vri', 'Zat'];
 
     var dagen = dagenNamen[huidigeTijd.getDay()];
-    document.getElementById('dag').innerHTML = '<p>' + dagen + '</p>';
+    document.getElementById('dag').innerHTML = "<p>" + dagen + '</p>';
+    if (modes == 0){
+        document.getElementsByTagName('p')[0].style.color = '#1d1d1d';
+
+
+    }
+    else{
+        document.getElementsByTagName('p')[0].style.color = '#E3EDF7';
+
+
+    }
 
     const seconden = huidigeTijd.getSeconds();
     const secondenHoek = ((seconden / 60) * 360) + 90;
@@ -30,18 +40,19 @@ tijdWeergave();
 var modes = 0;
 
 function colorswitch() {
+    var bgShade;
+    var shadow;
+
     if (modes == 0){
         //dark modes aan
         bgShade = '#1d1d1d';
         shadow = "-20px -20px 30px rgba(255, 255, 255, 0.02), 20px 20px 30px rgba(0, 0, 0, 0.27)";
-        text = '#E3EDF7';
 
         modes = 1;
     }
     else{
         //lightmodes aan
         bgShade = '#E3EDF7';
-        text = '#1d1d1d';
         shadow = "-20px -20px 30px rgba(255, 255, 255, 0.24), 20px 20px 30px rgba(0, 0, 0, 0.13)";
         modes = 0;
     }
@@ -52,7 +63,6 @@ function colorswitch() {
     document.getElementById('binnenRandKlok').style.backgroundColor = bgShade;
     document.getElementById('klok').style.backgroundColor = bgShade;
     document.getElementById('klok').style.boxShadow = shadow;
-    document.getElementById('dag').style.color = text;
 
 
     document.body.style.backgroundColor = bgShade;
