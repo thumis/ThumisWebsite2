@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main_style.css" />
+    <script src="myJS.js" defer></script>
+    <!-- defer zorgt ervoor dat het bestand laad nadat de website is geladen/-->
+    <title>XT2-C2</title>
+</head>
+<body>
+    <nav>
+
+    </nav>
+    <header>
+        <button onclick="colorswitch()">
+            <img id="modesSwitch" src="img/night.png" alt="nightmode switch">
+        </button>
+    </header>
+
+    <main>
+        <section id="klok">
+            <div id="buitenRandKlok">
+                <div id="vertikaleTijd" class="tijdsAanduiding">
+                </div>
+                <div id="binnenRandKlok">
+                    <div id="dagDeel">
+                        <div id="tijdIcoon"></div>
+                    </div>
+                    <div id="dag">
+                        <p>Maa</p>
+                    </div>
+
+                    <div id="urenWijzer" class="hand"></div>
+                    <div id="minutenWijzer" class="hand"></div>
+                    <div id="secondenWijzer" class="hand"></div>
+                </div>
+                <div id="horizontaleTijd" class="tijdsAanduiding">
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p class="footer">
+            &copy; 2020 Thomas Koolhaas
+        </p>
+    </footer>
+</body>
+</html>
