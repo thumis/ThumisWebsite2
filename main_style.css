@@ -9,22 +9,17 @@ body{
     background: #E3EDF7;
 
 }
-p:not(.footer){
-    font-size: 1em;
-    text-align: center;
-}
-p{
+p, footer{
     font-family: 'Muli', sans-serif;
+    font-size: 16px;
 }
 
 html {
     text-align: center;
-    font-size: 10px;
 }
 
 body {
     margin: 0;
-    font-size: 2rem;
     display: flex;
     flex: 1;
     min-height: 100vh;
@@ -201,3 +196,9 @@ button {
 #modesSwitchTekst{
     margin-top: 0;
 }
+
+/*Ik heb geen breakpoints toegevoegd aangezien ik een max-width en max-height heb toegevoegd bij de hoofd elementen en
+ die schalen op alle formaten goed mee (mobiel, tablet, kleine laptop, grote computer).
+ Bijna alles is aangegeven met % dus die schalen daarom mee met de hoofd elementen
+ Ik heb nog extra gekeken bij de volgende breakpoints maar daar zag het er goed uit: 320px width, 600px width, 1024px width en 1200px width */
+
