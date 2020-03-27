@@ -214,3 +214,17 @@ section#klok {
     box-shadow:
             5px 5px 5px rgba(0, 0, 0, 0.13);
 }
+
+button {
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    outline:none;
+}
+
+#modesSwitch{
+    width: 10vw;
+    height: 10vw;
+    max-width: 8vh;
+    max-height: 8vh;
+}
