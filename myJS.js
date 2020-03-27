@@ -1,25 +1,29 @@
 const urenWijzer = document.getElementById('urenWijzer');
 const minutenWijzer = document.getElementById('minutenWijzer');
 const secondenWijzer = document.getElementById('secondenWijzer');
+const pTags = document.getElementsByTagName('p');
 
 function tijdWeergave(){
-    const huidigeTijd = new Date();
+    var huidigeTijd = new Date();
 
-    var dagenNamen = ['Zon', 'Maa', 'Din', 'Woe', 'Don', 'Vri', 'Zat'];
+    const dagenNamen = ['Zon', 'Maa', 'Din', 'Woe', 'Don', 'Vri', 'Zat'];
 
     var dagen = dagenNamen[huidigeTijd.getDay()];
     document.getElementById('dag').innerHTML = "<p>" + dagen + '</p>';
-    if (modes == 0){
-        document.getElementsByTagName('p')[0].style.color = '#1d1d1d';
-        document.getElementsByTagName('p')[1].style.color = '#1d1d1d';
-        document.getElementsByTagName('p')[2].style.color = '#1d1d1d';
 
+    if (modes == 0){
+        i = 0;
+        while (i < pTags.length) {
+            pTags[i].style.color = '#1d1d1d';
+            i++;
+        }
     }
     else{
-        document.getElementsByTagName('p')[0].style.color = '#E3EDF7';
-        document.getElementsByTagName('p')[1].style.color = '#E3EDF7';
-        document.getElementsByTagName('p')[2].style.color = '#E3EDF7';
-
+        i = 0;
+        while (i < pTags.length) {
+            pTags[i].style.color = '#E3EDF7';
+            i++;
+        }
     }
 
     const seconden = huidigeTijd.getSeconds();
@@ -61,18 +65,12 @@ function colorswitch() {
         modes = 0;
     }
 
-    //er moet [0] bij omdat hij anders niet weet welke nav er gebruikt moet worden ook al is er maar eentje
-
-    // document.getElementsByTagName('p')[0].style.color = colorlight1;;
     document.getElementById('binnenRandKlok').style.backgroundColor = bgShade;
     document.getElementById('klok').style.backgroundColor = bgShade;
     document.getElementById('klok').style.boxShadow = shadow;
     document.getElementById("modesSwitch").src = image;
 
-
-
     document.body.style.backgroundColor = bgShade;
-
 }
 
 function dagDeel(){
@@ -87,17 +85,13 @@ function dagDeel(){
     else if (dagDeel >= 8 && dagDeel < 18){
         document.getElementById("dagDeel").style.backgroundImage = "url('img/day.jpg')";
         document.getElementById("tijdIcoon").style.backgroundImage = "url('img/icons/dark/Daytime.png')";
-
     }
     else if (dagDeel >= 18 && dagDeel < 20){
         document.getElementById("dagDeel").style.backgroundImage = "url('img/sunset.jpg')";
         document.getElementById("tijdIcoon").style.backgroundImage = "url('img/icons/light/Sunset.png')";
-
     }
     else { //nacht
         document.getElementById("dagDeel").style.backgroundImage = "url('img/night.jpg')";
         document.getElementById("tijdIcoon").style.backgroundImage = "url('img/icons/light/Night.png')";
-
     }
 }
-
