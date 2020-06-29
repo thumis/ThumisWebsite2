@@ -58,7 +58,7 @@ body {
 #dag p{
     color: #000000;
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1em;
     text-shadow:
             5px 5px 5px rgba(0, 0, 0, 0.13);
 }
@@ -197,11 +197,32 @@ button {
     margin-top: 0;
 }
 
-/* Ik heb toen ik aan het coderen was de keuze gemaakt om geen breakpoints te gebruiken. Ik heb een max-width en
+@media screen and (max-width: 320px){
+    #dag p {
+        font-size: 1em;
+    }
+}
+@media screen and (min-width: 600px)  and (max-width: 1023px){
+    #dag p {
+        font-size: 1.1em;
+    }
+}
+@media screen and (min-width: 1024px)  {
+    #dag p {
+        font-size: 1.2em;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #dag p {
+        font-size: 1.3em;
+    }
+}
+
+/* Ik heb toen ik aan het coderen was had ik verder geen breakpoints nodig. Ik heb een max-width en
 max-height heb toegevoegd bij de hoofd elementen en die schalen op alle formaten goed mee (mobiel, tablet, kleine
 laptop, grote computer). Bijna alles is aangegeven met % dus die schalen daarom mee met de hoofd elementen. Ik heb nog
 extra gekeken bij de volgende breakpoints maar daar zag het er goed uit: 320px width, 600px width, 1024px width en
 1200px width. Omdat het niet een ingewikkelde website was met eigenlijk 1 hoofd element en twee kleine dingen kon ik
 geen reden bedenken om wel die breakpoints te gebruiken aangezien de max-width en max-height bij de hoofd elementen
-alles al responsive maakte met clean en minder code. */
+alles al responsive maakte met clean en minder code. Het enige waarvoor ik ze nodig had was het vergroten en verkleinen van de tekst in het horloge omdat die niet mooi was op alle formaten*/
 
